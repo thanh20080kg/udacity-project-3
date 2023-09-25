@@ -283,7 +283,9 @@ jobs:
           name: Install AWS CLI dependencies
           working_directory: /tmp
           command: |
-            yum install -y tar gzip curl nodejs
+            yum install -y tar gzip curl
+            curl -sL https://rpm.nodesource.com/setup_20.x | bash -
+            yum install -y nodejs
       - attach_workspace:
           at: .
       - run:
