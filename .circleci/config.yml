@@ -310,7 +310,7 @@ jobs:
             npm run build
             tar -czvf artifact-"${CIRCLE_WORKFLOW_ID:0:7}".tar.gz dist
             pwd
-            aws s3 cp /root/project/frontend/dist "s3://udacity-3-${CIRCLE_WORKFLOW_ID:0:7}" --recursive
+            aws s3 sync dist "s3://udacity-3-${CIRCLE_WORKFLOW_ID:0:7}" --recursive
       - persist_to_workspace:
           root: .
           paths:
