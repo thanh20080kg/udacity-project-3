@@ -1,5 +1,5 @@
 Description: >
-  Cloudfront distribution for Udacity 3.
+  Cloudfront distribution for UdaPeople.
 
 Parameters:
   WorkflowID:
