@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner} from 'typeorm';
+    import {MigrationInterface, QueryRunner} from 'typeorm';
 
 export class AddEmployee1555722583168 implements MigrationInterface {
 
@@ -9,9 +9,9 @@ export class AddEmployee1555722583168 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<any> {
-        await queryRunner.query(`DROP INDEX "IDX_d6c66c08b9c7e84a1b657797df"`);
-        await queryRunner.query(`DROP INDEX "IDX_1f9ea0b0e59e0d98ade4f2d5e9"`);
-        await queryRunner.query(`DROP TABLE "employee"`);
+        await queryRunner.query(`DROP INDEX IF EXISTS "IDX_d6c66c08b9c7e84a1b657797df"`);
+        await queryRunner.query(`DROP INDEX IF EXISTS "IDX_1f9ea0b0e59e0d98ade4f2d5e9"`);
+        await queryRunner.query(`DROP TABLE IF EXISTS "employee"`);
     }
 
 }
